@@ -1,58 +1,31 @@
 {
-	"name": "cryptocurrency-icons",
-	"version": "0.10.1",
-	"description": "A set of icons for all the main cryptocurrencies and altcoins, in a range of styles and sizes",
-	"license": "CC0-1.0",
-	"repository": "atomiclabs/cryptocurrency-icons",
-	"homepage": "http://cryptoicons.co",
-	"files": [
-		"32",
-		"32@2x",
-		"128",
-		"svg",
-		"manifest.json"
-	],
-	"keywords": [
-		"cryptocurrency",
-		"icons",
-		"icon",
-		"crypto",
-		"currency",
-		"cryptocurrencies",
-		"currencies",
-		"symbols",
-		"svg",
-		"png",
-		"vector",
-		"color",
-		"coin",
-		"bitcoin",
-		"ethereum",
-		"flat-icons",
-		"altcoin",
-		"altcoins",
-		"icon-pack",
-		"icon-set",
-		"erc20-tokens",
-		"erc20",
-		"erc721"
-	],
-	"scripts": {
-		"test": "xo",
-		"manifest": "node scripts/manifest.js",
-		"clean": "svgo --multipass --disable=removeViewBox $(globby {svg,originals}/**/*.svg)"
-	},
-	"devDependencies": {
-		"alpha-sort": "^2.0.1",
-		"coinlist": "^3.0.0",
-		"globby-cli": "^1.0.1",
-		"husky": "^1.3.1",
-		"svgo": "^1.2.0",
-		"xo": "^0.24.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run manifest && npm run clean"
-		}
-	}
+  "name": "vue-cryptocurrency-icons",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/vue-cryptocurrency-icons.common.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name vue-cryptocurrency-icons ./src/components/IconCrypto.vue"
+  },
+  "dependencies": {
+    "vue": "^2.6.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ]
 }
