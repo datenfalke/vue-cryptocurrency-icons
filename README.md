@@ -1,6 +1,6 @@
 # Vue Cryptocurrency Icons
 
-A Vue.js component for the project [`cryptocurrency-icons`](https://github.com/atomiclabs/cryptocurrency-icons): a set of icons for 6000 cryptocurrencies and altcoins.
+A Vue.js component for the project [`cryptocurrency-icons`](https://github.com/atomiclabs/cryptocurrency-icons): 6000 icons – almost 400 crypto currencies, in 4 styles and a range of sizes.
 
 ## Quick start
 

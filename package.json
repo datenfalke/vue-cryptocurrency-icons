@@ -1,8 +1,8 @@
 {
   "name": "vue-cryptocurrency-icons",
   "license": "MIT",
-  "version": "0.1.7",
-  "description": "A Vue.js component for the project 'cryptocurrency-icons': a set of 6000 cryptocurrency icons.",
+  "version": "0.1.8",
+  "description": "A Vue.js component for the project 'cryptocurrency-icons: 6000 icons – almost 400 crypto currencies, in 4 styles and a range of sizes.'",
   "repository": {
     "type": "git",
     "url": "git@github.com:steevepay/vue-cryptocurrency-icons.git"
