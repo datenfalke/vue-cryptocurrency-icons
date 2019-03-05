@@ -41,14 +41,19 @@ export default {
   computed: {
     mediapath() {
       try {
-        return require(`@/assets/cryptocurrency-icons/${this.format}/${
-          this.color
-        }/${this.coinname.toLowerCase() + this.ext}`);
+        return require(`@/../node_modules/cryptocurrency-icons/svg/color/${this.coinname.toLowerCase()}.svg`);
       } catch (e) {
-        return require(`@/assets/cryptocurrency-icons/${this.format}/${
-          this.color
-        }/generic${this.ext}`);
+        return require(`@/../node_modules/cryptocurrency-icons/svg/color/generic.svg`);
       }
+      // try {
+      //   return require(`@/assets/cryptocurrency-icons/${this.format}/${
+      //     this.color
+      //   }/${this.coinname.toLowerCase() + this.ext}`);
+      // } catch (e) {
+      //   return require(`@/assets/cryptocurrency-icons/${this.format}/${
+      //     this.color
+      //   }/generic${this.ext}`);
+      // }
     }
   }
 };

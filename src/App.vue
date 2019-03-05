@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <IconCrypto coinname="BTC" color="color" format="svg"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IconCrypto from './components/IconCrypto.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    IconCrypto
   }
 }
 </script>

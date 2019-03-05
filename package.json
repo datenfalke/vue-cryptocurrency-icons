@@ -1,15 +1,15 @@
 {
   "name": "vue-cryptocurrency-icons",
   "version": "0.1.0",
-  "private": true,
   "main": "./dist/vue-cryptocurrency-icons.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name vue-cryptocurrency-icons ./src/components/IconCrypto.vue"
+    "build-bundle": "vue-cli-service build --target lib --name vue-cryptocurrency-icons ./src/components/index.js"
   },
   "dependencies": {
+    "cryptocurrency-icons": "^0.10.1",
     "vue": "^2.6.6"
   },
   "devDependencies": {
@@ -23,9 +23,7 @@
   },
   "files": [
     "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "src/components/*",
+    "*.json"
   ]
 }
