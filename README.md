@@ -1,29 +1,59 @@
-# vue-cryptocurrency-icons
+# Vue Cryptocurrency Icons
 
-## Project setup
-```
-npm install
-```
+A Vue.js component for the project [`cryptocurrency-icons`](https://github.com/atomiclabs/cryptocurrency-icons): a set of icons for 6000 cryptocurrencies and altcoins.
 
-### Compiles and hot-reloads for development
+## Quick start
+
 ```
-npm run serve
+npm install --save vue-cryptocurrency-icons
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+```js
+import Vue from "vue";
+import IconCrypto from "vue-cryptocurrency-icons";
+
+Vue.use(IconCrypto);
 ```
 
-### Run your tests
-```
-npm run test
+## Example
+
+```vue
+<template>
+  <div id="app">
+    <IconCrypto coinname="ETH" color="color" format="svg" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: "app"
+};
+</script>
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Documentation
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Props
+
+**coinname**
+
+The name of the coin.
+
+- type: `String`
+- required: `true`
+
+If the coin name passed as props does not exist, an a [`generic icon`](https://github.com/atomiclabs/cryptocurrency-icons/blob/master/svg/color/generic.svg) is used.
+
+**color**
+
+The color of the coin.
+
+- type: `String`
+- default: `color`
+- available values: `color` - `black` - `white`
+
+**format**
+
+- type: `String`
+- default: `32`
+- available values: `32` - `128` - `svg`
