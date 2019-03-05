@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="src + mediapath" :alt="coinname + '-logo'">
+    <img :src="mediapath" :alt="coinname + '-logo'" @error="imageLoadError">
   </div>
 </template>
 
@@ -29,7 +29,6 @@ export default {
   },
   data() {
     return {
-      src: "@/../node_modules/vue-cryptocurrency-icons",
       ext: ".png"
     };
   },
@@ -38,28 +37,16 @@ export default {
       this.ext = ".svg";
     }
   },
+  methods: {
+    imageLoadError (event) {
+      event.target.src = 'https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.10.1/svg/black/generic.svg';
+    }
+  },
   computed: {
     mediapath() {
-      try {
-        return require('./../../node_modules/cryptocurrency-icons/svg/color/'+this.coinname.toLowerCase()+'.svg');
-      } catch (e) {
-        return require('./../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
-      }
-      // try {
-        // return require(`~/node_modules/cryptocurrency-icons/svg/color/${this.coinname.toLowerCase()}.svg`);
-      // } catch (e) {
-        // return require(`~/node_modules/cryptocurrency-icons/svg/color/generic.svg`);
-      // }
-
-      // try {
-      //   return require(`@/assets/cryptocurrency-icons/${this.format}/${
-      //     this.color
-      //   }/${this.coinname.toLowerCase() + this.ext}`);
-      // } catch (e) {
-      //   return require(`@/assets/cryptocurrency-icons/${this.format}/${
-      //     this.color
-      //   }/generic${this.ext}`);
-      // }
+        return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.10.1/${this.format}/${
+           this.color
+         }/${this.coinname.toLowerCase() + this.ext}`;
     }
   }
 };

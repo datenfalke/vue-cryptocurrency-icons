@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <IconCrypto coinname="BTC" color="color" format="svg"/>
+    <IconCrypto coinname="ETH" color="color" format="svg"/>
   </div>
 </template>
 
