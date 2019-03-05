@@ -1,6 +1,8 @@
 {
   "name": "vue-cryptocurrency-icons",
-  "version": "0.1.6",
+  "license": "MIT",
+  "version": "0.1.7",
+  "description": "A Vue.js wrapper for the project 'cryptocurrency-icons: a set of icons for all the main cryptocurrencies and altcoins'",
   "repository": {
     "type": "git",
     "url": "git@github.com:steevepay/cryptocurrency-icons.git"
@@ -28,5 +30,32 @@
     "dist/*",
     "src/components/*",
     "*.json"
+  ],
+  "keywords": [
+    "cryptocurrency",
+    "icons",
+    "icon",
+    "crypto",
+    "currency",
+    "cryptocurrencies",
+    "currencies",
+    "symbols",
+    "svg",
+    "png",
+    "vector",
+    "color",
+    "coin",
+    "bitcoin",
+    "ethereum",
+    "flat-icons",
+    "altcoin",
+    "altcoins",
+    "icon-pack",
+    "icon-set",
+    "erc20-tokens",
+    "erc20",
+    "erc721",
+    "vuejs",
+    "vue2"
   ]
 }
