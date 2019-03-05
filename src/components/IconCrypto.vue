@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="mediapath" :alt="coinname + '-logo'">
+    <img :src="src + mediapath" :alt="coinname + '-logo'">
   </div>
 </template>
 
@@ -29,11 +29,11 @@ export default {
   },
   data() {
     return {
+      src: "@/../node_modules/vue-cryptocurrency-icons",
       ext: ".png"
     };
   },
   created() {
-    this.coinname.toLowerCase();
     if (this.format === "svg") {
       this.ext = ".svg";
     }
@@ -41,9 +41,9 @@ export default {
   computed: {
     mediapath() {
       try {
-        return require(`./../../node_modules/cryptocurrency-icons/svg/color/${this.coinname.toLowerCase()}.svg`);
+        return require('./../../node_modules/cryptocurrency-icons/svg/color/'+this.coinname.toLowerCase()+'.svg');
       } catch (e) {
-        return require(`./../../node_modules/cryptocurrency-icons/svg/color/generic.svg`);
+        return require('./../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
       }
       // try {
         // return require(`~/node_modules/cryptocurrency-icons/svg/color/${this.coinname.toLowerCase()}.svg`);
