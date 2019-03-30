@@ -44,7 +44,7 @@ export default {
   },
   computed: {
     mediapath() {
-        return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.10.1/${this.format}/${
+        return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.11.0/${this.format}/${
            this.color
          }/${this.coinname.toLowerCase() + this.ext}`;
     }
