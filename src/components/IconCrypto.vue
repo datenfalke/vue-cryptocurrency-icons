@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img :src="mediapath" :alt="coinname + '-logo'" @error="imageLoadError">
-  </div>
+  <img :src="mediapath" :alt="coinname + '-logo'" @error="imageLoadError">
 </template>
 
 <script>
