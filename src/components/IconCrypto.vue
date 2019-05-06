@@ -19,7 +19,7 @@ export default {
     },
     format: {
       type: String,
-      default: "32",
+      default: "svg",
       validator: function(value) {
         return ["32", "128", "svg"].indexOf(value) !== -1;
       }
@@ -36,15 +36,20 @@ export default {
     }
   },
   methods: {
-    imageLoadError (event) {
-      event.target.src = 'https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.10.1/svg/black/generic.svg';
+    imageLoadError(event) {
+      event.target.src =
+        "https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.13.0/svg/black/generic.svg";
     }
   },
   computed: {
     mediapath() {
-        return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.11.0/${this.format}/${
-           this.color
-         }/${this.coinname.toLowerCase() + this.ext}`;
+      let coin =
+        this.coinname !== undefined && this.coinname !== ""
+          ? this.coinname.toLowerCase()
+          : "generic";
+      return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.13.0/${
+        this.format
+      }/${this.color}/${coin + this.ext}`;
     }
   }
 };

@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <IconCrypto coinname="ETH" color="color" format="svg"/>
+    <IconCrypto coinname="BTC" color="color" format="svg"/>
   </div>
 </template>
 
 <script>
-import IconCrypto from './components/IconCrypto.vue'
+import IconCrypto from "./components/IconCrypto.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     IconCrypto
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
