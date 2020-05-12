@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <IconCrypto coinname="BTC" color="color" format="svg"/>
+    <IconCrypto v-for="ticker in cryptoList" :key="ticker" :coinname="ticker" color="color" format="svg" style="margin-right:10px"/>
   </div>
 </template>
 
@@ -11,7 +11,12 @@ export default {
   name: "app",
   components: {
     IconCrypto
-  }
+  },
+  data() {
+    return {
+      cryptoList: ["BTC", "ETH", "XRP", "ETC", "ADA", "EOS", "USDT", "Random"]
+    }
+  },
 };
 </script>
 

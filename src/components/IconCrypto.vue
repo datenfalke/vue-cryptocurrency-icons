@@ -7,7 +7,6 @@ export default {
   name: "IconCrypto",
   props: {
     coinname: {
-      type: String,
       required: true
     },
     color: {
@@ -38,7 +37,7 @@ export default {
   methods: {
     imageLoadError(event) {
       event.target.src =
-        "https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.13.0/svg/black/generic.svg";
+        "https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/svg/black/generic.svg";
     }
   },
   computed: {
@@ -47,7 +46,7 @@ export default {
         this.coinname !== undefined && this.coinname !== ""
           ? this.coinname.toLowerCase()
           : "generic";
-      return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.13.0/${
+      return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/${
         this.format
       }/${this.color}/${coin + this.ext}`;
     }
