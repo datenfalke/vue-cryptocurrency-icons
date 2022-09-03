@@ -37,7 +37,7 @@ export default {
   methods: {
     imageLoadError(event) {
       event.target.src =
-        "https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/svg/black/generic.svg";
+        "https://cdn.jsdelivr.net/npm/cryptocurrency-icons@latest/svg/black/generic.svg";
     }
   },
   computed: {
@@ -46,7 +46,7 @@ export default {
         this.coinname !== undefined && this.coinname !== ""
           ? this.coinname.toLowerCase()
           : "generic";
-      return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/${
+      return `https://cdn.jsdelivr.net/npm/cryptocurrency-icons@latest/${
         this.format
       }/${this.color}/${coin + this.ext}`;
     }
